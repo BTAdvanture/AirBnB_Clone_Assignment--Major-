@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airbnb | Holiday Homes</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- Font Awecome -->
+  <script src="https://kit.fontawesome.com/5330c4447b.js" crossorigin="anonymous"></script>
+  <!-- External Css -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/details.css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- favicon added -->
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js" integrity="sha512-QTnb9BQkG4fBYIt9JGvYmxPpd6TBeKp6lsUrtiVQsrJ9sb33Bn9s0wMQO9qVBFbPX3xHRAsBHvXlcsrnJjExjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+  <%-include('../partials/nav')%>
+  <%-include('../partials/login')%>
+
+  <section class="container details-container">
+    <div class="image-container">
+      <div class="heading name">
+        <h5 class="data-name">
+          <%=data.name%>
+        </h5>
+      </div>
+      <div class="review-save">
+
+        <div class="review">
+          <i class="fa-solid fa-star">
+          </i> <span class="text-secondary new">New</span>
+          <span class="mx-2 address" ><ins>
+              <%=data.address%>
+            </ins></span>
+        </div>
+        <div class="share-save">
+          <span class="p-2 save ">save</span><span style="color: grey;">❤</span>
+          <span class="p-2 share ">share </span><i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+      </div>
+      <div class="container">
+        <div class="img-grid mt-2">
+
+          <img id="img1" class="img-grid-col-2 img-grid-row-2 " src="<%=data.images%>" alt="">
+          <img id="img2" src="<%=data.images%>" alt="">
+          <img id="img3" class="border-radius" src="<%=data.images%>" alt="">
+          <img id="img4" src="<%=data.images%>" alt="">
+          <img id="img5" class="border-radius" src="<%=data.images%>" alt="">
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Middle section starts from here -->
+  <div class="container-mid container mt-5">
+    <div class="row featurette">
+      <div class="col-md-12">
+        <div class="bed_bath_info">
+          <h5 class="featurette-heading  lh-1"> <b>Home hosted by <%=data.name%></b>
+          </h5>
+          <p class="lead"><span>
+              1 guest -
+            </span> <span>
+              <%=data.bedrooms%> bedrooms -
+            </span>  <span>
+              <%=data.bed%> beds - 
+            </span>  <span>
+            </span></p>
+
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="policies m-4">
+          <div class="cancellation mt-3 ">
+            <i class="fa-solid fa-calendar-days icons"></i> <span class="p-1 pol"> cancelation policy
+              <%=data.cancellation_policy%>
+            </span>
+
+          </div>
+          <div class="mt-3">
+            <i class="fa-solid fa-location-crosshairs icons"></i> <span class="p-1 pol">Great location</span>
+            <p class="text-secondary">100% of recent guests gave the location a 5-star rating.</p>
+          </div>
+          <div class="mt-3">
+            <i class="fa-solid fa-key icons"></i> <span class="p-1 pol">Great check-in experience</span>
+            <p class="text-secondary">94% of recent guests gave the check-in process a 5-star rating.</p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+
+        <div class="information m-4">
+          <h1><span class="heading-color">air</span> cover</h1>
+          <p>
+            <%=data.summery%>
+          </p>
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="place-offers">
+
+          <div class="container" id="icon-grid">
+            <h2 class="pb-2 ">What this place offers</h2>
+
+            <div class="container container-booking">
+
+
+              <!-- This contains all place offer -->
+              <div class="offers">
+
+                <div class="offer-1">
+                  <p>
+                    <i class="fa-solid fa-wifi mx-2 p-1"></i> <em>Wifi</em>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-mountain mx-2 p-1"></i> <em>Mountain</em>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-cat mx-2 p-1"></i> <em>Pets </em>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-umbrella-beach mx-2 p-1"></i> <em>Beach</em>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-lock mx-2 p-1"></i><em> Private back</em>
+                  </p>
+                </div>
+                <div class="offer-2">
+                  <p>
+                    <i class="fa-solid fa-fire mx-2 p-1"></i> <em>Indoor</em>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-kitchen-set mx-2 p-1"></i> <em>Kitchen</em>
+                  </p>
+                  <p>
+                    <i class="fa-solid fa-square-parking mx-2 p-1"></i> <em>Free parking </em>
+                  </p>
+                </div>
+
+              </div>
+              <!-- This contains all place offer  secton ends here-->
+
+
+              <!-- This is booking part -->
+              <div class="booking">
+                <div class="card" style="width: 100%;height:100%; ">
+                  <div>
+                    <form action="" name="Myform" onsubmit="return validateForm()">
+                      <div class=" card-body">
+                      <h6 class="card-title"> ₹<%=data.Price%> Per night</h6>
+                      <hr>
+                      <li class="list-group-item">CHECK-IN : <input class="checkin mt-1" type="date" required name="fromdate">
+                      </li>
+                      <li class="list-group-item">CHECK-OUT : <input class="checkout mt-1" type="date" required>
+                      </li>
+                      <li class="list-group-item mt-1"> GUESTS :
+                        <select id="guest" required>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </li>
+                      <input id="rzp-button1" type="submit" class="mt-4 reserve" value="Reserve">
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- booking part Ends here -->
+
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+    <hr class="featurette-divider mt-4">
+
+
+    <!-- Reviews section started here -->
+
+
+
+
+
+    <!-- Map embaded here in our project -->
+    <div class="map container-fluid  mt-3">
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59581.2148399414!2d75.77465834055997!3d21.039649974276966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd9a61556423e47%3A0x47f833853d8103a6!2sBhusawal%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1669799884497!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Footer starts from here -->
+
+  <footer class="text-center text-lg-start bg-light text-muted mt-5">
+
+    <section class="p-4 border-bottom">
+      <div class="container-fluid text-center text-md-start mt-4">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3  mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-2 text-dark">
+              <b>support</b>
+            </h6>
+            <p>
+              Help Center
+            </p>
+            <p>
+              AirCover
+            </p>
+            <p>
+              Supporting people with disabilities
+            </p>
+            <p>
+              cancellation options
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 text-dark">
+              Community
+            </h6>
+            <p>
+              Airbnb.org: disaster relief housing
+            </p>
+            <p>
+              Combating discrimination
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 text-dark">
+              Hosting
+            </h6>
+            <p>
+              Airbnb your home
+            </p>
+            <p>
+              AirCover for Hosts
+            </p>
+            <p>
+              Explore hosting resources
+            </p>
+            <p>
+              Visit our community forum
+            </p>
+            <p>
+              How to host responsibly
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold text-dark mb-4">Airbnb</h6>
+            <p>Newsroom</p>
+            <p>Learn about new features</p>
+            <p>Letter from our founders/p>
+            <p>Careers</p>
+            <p>Investors</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2022 Airbnb, Inc.
+
+    </div>
+  </footer>
+  <!-- Footer -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+
+
+
+  <script>
+    axios.post('/order').then((info) => {
+      // console.log(info)
+
+
+      var options = {
+        "key": process.env.KEY_ID,
+        "name": "Airbnb Checkout",
+        "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        "currency": "INR",
+        "description": "Test Transaction",
+        "image": "https://blog.logomyway.com/wp-content/uploads/2020/03/arbnb-logo.jpg",
+        "order_id": info.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        "callback_url": "/is-order-complete",
+        "theme": {
+          "color": "#3399cc"
+        }
+      };
+
+      let rzp1 = new Razorpay(options)
+      document.getElementById('rzp-button1').onclick = async function(e) {
+        if (validateForm() === false) {
+          return alert("Check in and Checkout must be filled out");
+        } else {
+          rzp1.open();
+          e.preventDefault();
+        }
+
+
+      }
+
+    })
+  </script>
+
+  <script>
+    // for verifying if user have selected date or not
+    function validateForm() {
+      let x = document.forms["Myform"]["fromdate"].value;
+      if (x == "") {
+        return false;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

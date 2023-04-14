@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/5330c4447b.js" crossorigin="anonymous"></script>
+  <title>Host Your Homes</title>
+  <style>
+    body {
+      background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-scene-with-geometrical-forms-the-poster-model-minimal-background-render-image_437743.jpg);
+
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .main-container {
+      display: flex;
+      min-height: 100vh;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+
+    .container {
+      border: 1px solid grey;
+      padding: 20px;
+      border-radius: 2%;
+      background-color: whitesmoke;
+    }
+
+    h2 {
+      color: #ff385c;
+      font-weight: bolder;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="container">
+      <h2 class="text-center"> <i class="fa-solid fa-house mx-3"></i>Register Your Home On Airbnb</h2>
+      <hr>
+      <form class="row g-3" action="/hosthome" method="POST">
+        <div class="col-md-8">
+          <label for="inputEmail4" class="form-label">Property Name</label>
+          <input type="text" class="form-control" id="inputEmail4" name="propertyname" required>
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword4" class="form-label">Country</label>
+          <input type="text" class="form-control" id="inputPassword4" name="country" required>
+        </div>
+        <div class="col-3">
+          <label for="inputAddress" class="form-label">Price</label>
+          <input type="number" class="form-control" id="inputAddress" placeholder="Ex 1234" name="prince" required>
+        </div>
+        <div class="col-9">
+          <label for="inputAddress2" class="form-label">Summery about property</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Describe about your property" name="summery" required>
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Bedrooms</label>
+          <select id="inputState" class="form-select" name="bedrooms" required>
+            <option selected>Choose...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Bed</label>
+          <select id="inputState" class="form-select" name="bed" required>
+            <option selected>Choose...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Bathrooms</label>
+          <select id="inputState" class="form-select" name="bathrooms" required>
+            <option selected>Choose...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="col-md-7">
+          <label for="inputCity" class="form-label">Property Image URL</label>
+          <input type="text" class="form-control" id="inputCity" name="image" required>
+        </div>
+        <div class="col-md-5">
+          <label for="inputZip" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputZip" name="address" required>
+        </div>
+        <div class="col-md-5">
+          <label for="inputZip" class="form-label">Cancelletion Policy</label>
+          <input type="text" class="form-control" id="inputZip" name="policy" required>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="d-grid col-4 mx-auto">
+          <button type="submit" class="btn btn-danger">Host</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airbnb | Holiday Homes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/5330c4447b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="/css/about.css">
+
+<body>
+
+  <%-include('./partials/nav')%>
+
+  <!-- background image added here -->
+  <section class="image">
+    <img src="https://news.airbnb.com/wp-content/uploads/sites/4/2022/09/Newsroom-About.jpg?w=2048" alt="image">
+  </section>
+
+  <!-- main container ends here -->
+
+  <!-- about us section starts here -->
+
+  <section class="about">
+
+    <!-- This is information about airbnb section -->
+    <div class="aboutus">
+      <h3>About us</h3>
+      <p>Airbnb was born in 2007 when two Hosts welcomed three guests to their San
+        Francisco home, and has since grown to over 4 million Hosts who have welcomed
+        more than 1 billion guest arrivals in almost every country across the globe.
+        Every day, Hosts offer unique stays and experiences that make it possible for
+        guests to connect with communities in a more authentic way.</p>
+    </div>
+
+  </section>
+
+  <!-- about us section Ends here -->
+
+  <!-- fast fact container starts here -->
+
+  <section class="facts">
+
+    <!-- heading -->
+    <div class="heading">
+      <h1>Fast Facts</h1>
+    </div>
+
+    <!-- facts about airbnb -->
+
+    <div class="facts-container">
+      <div class="box" data-aos="zoom-in">
+        <h1>6M</h1>
+        <p>active listing worldwide</p>
+        <div>
+          as of March 31,22
+        </div>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+        <h1>100k</h1>
+        <p>cities and towns with active airbnb listings
+        </p>
+
+        <div>
+          as of March 31,22
+        </div>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+        <h1>220 +</h1>
+        <p>countries and regions with Airbnb listings</p>
+
+        <div>
+          as of March 31,22
+        </div>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+        <h1>1B +</h1>
+        <p>active listing worldwide</p>
+
+        <div>
+          as of March 31,22
+        </div>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+        <h1>4m</h1>
+        <p>Hosts of Airbnb</p>
+
+        <div>
+          as of March 31,22
+        </div>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+        <h1>$150B+</h1>
+        <p>Earned by Hosts, all-time</p>
+
+        <div>
+          as of March 31,22
+        </div>
+      </div>
+      <div class="box" data-aos="zoom-in">
+        <h1>$12.8K</h1>
+        <p>earned by the typical Us Host in 2021</p>
+
+        <div>
+          as of March 31,22
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- fast fact container Ends here -->
+
+  <!-- Founderes section starts from here -->
+
+  <section class="founders">
+
+    <div class="heading">
+      <h1>Founders</h1>
+    </div>
+
+    <div class="founders-info">
+
+      <div class="row row-cols-1 row-cols-md-3 g-2" id="card-container">
+        <div class="col">
+          <div class="card">
+            <img src="https://news.airbnb.com/wp-content/uploads/sites/4/2016/10/140602_AirBnb_Brian_3837_SquareCrop.jpg?fit=950%2C950" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Brian Chesky</h5>
+              <p class="card-text">Airbnb Co-Founder nad Chief executive officer</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://news.airbnb.com/wp-content/uploads/sites/4/2016/10/leadership_nate.jpg?fit=950%2C950" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Natian Blecharczyk</h5>
+              <p class="card-text">Airbnb Co-Founder and Chief Strategy Officer</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://news.airbnb.com/wp-content/uploads/sites/4/2016/10/Airbnb_Joe_Square.jpg?fit=950%2C950" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Joe Gebbia</h5>
+              <p class="card-text">Airbnb Co-founder and Chairman of Airbnb.org</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Founderes section Ends here -->
+  <%-include('./partials/footer)%>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  <!--AOS Library Added here -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>

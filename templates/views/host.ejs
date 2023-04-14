@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airbnb | Holiday Homes</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- Font Awecome -->
+  <script src="https://kit.fontawesome.com/5330c4447b.js" crossorigin="anonymous"></script>
+  <!-- External Css -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/host.css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- favicon added -->
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- This is ligin and signup form created partial and inclued here -->
+
+  <nav class="navbar bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img class="logo" width="40px" src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt=""></a>
+      <div class="d-flex">
+        <span class="airbnbit"> Ready to Airbmb it?</span>
+        <a class="airbnbsetup" href="/admin"><i class="fa-solid fa-house p-2"></i>Airbnb Setup</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- This is card that stores all hotels information this card is looped using foreach
+
+
+        data get from mongodb atlas sampledatabase -->
+  <section class="container-fluid">
+
+    <div class="container">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-4">
+        <div class="col-12 col-sm- col-lg-7">
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5387329.367430718!2d74.30407419651114!3d18.92057080269832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcfc41e9c9cd6f9%3A0x1b2f22924be04fb6!2sMaharashtra!5e0!3m2!1sen!2sin!4v1669873391628!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-lg-5">
+          <h1 class=" text-center fw-bolder lh-1 mb-1 heading">Airbnb it</h1>
+          <h2 class=" text-center fw-bold lh-1 mb-2">you can earn</h2>
+          <h2 class=" text-center fw-bold lh-1 mb-2">Rs. 43,974</h2>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Airbnb setup images of peoples with mobile  -->
+  <section class="mid-host mt-5 mb-5">
+    <div class="container">
+      <div>
+        <h1 class="text-center text-dark ">Airbnb it easy with Airbnb Setup</h1>
+      </div>
+      <div class="image-host mt-5">
+        <img width="100%" src="https://a0.muscache.com/im/pictures/65214d06-ffb4-4b70-93c0-01d368e76649.jpg?im_w=2560&im_q=highq" alt="">
+      </div>
+      <div class="row container mt-5">
+        <div class=" col-lg-4 col-md-12 col-sm-12 text-center">
+          <h5 class="fw-bolder">One-to-one guidance from a Superhost</h5>
+          <p class="mt-3">We’ll match you with a Superhost in your area, who’ll guide you from your first question to
+            your first guest – by phone, video call or chat.</p>
+        </div>
+        <div class=" col-lg-4 col-md-12 col-sm-12 text-center">
+          <h5 class="fw-bolder">An experienced guest for your first booking</h5>
+          <p class="mt-3">For your first booking, you can choose to welcome an experienced guest who has at least
+            three stays and a good track record on Airbnb.</p>
+        </div>
+        <div class=" col-lg-4 col-md-12 col-sm-12 text-center">
+          <h5 class="fw-bolder">Specialised support from Airbnb</h5>
+          <p class="mt-3">New Hosts get one-tap access to specially trained Community Support agents who can help with
+            everything from account issues to billing support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Airbnb setup images of peoples with mobile  Ends -->
+
+
+
+
+  <!--  Top to bottom protection airbnb -->
+
+  <div class="display-6 text-center mb-3 aircover"><img src="https://a0.muscache.com/im/pictures/cecbf134-6674-410f-9345-603716048771.jpg?im_w=480&im_q=highq" alt="">
+  </div>
+
+  <div class="table-responsive container">
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th style="width: 20%;"></th>
+          <th class="coverheading" style="width: 30%;">Airbnb</th>
+          <th class="coverheading" style="width: 20%;">competitors</th>
+          <!-- <th style="width: 22%;">Enterprise</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="text-center tabledata">Guest identity verification</th>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-check"></i>
+            </span></td>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-check"></i>
+            </span></td>
+
+        </tr>
+        <tr>
+          <th scope="row" class="text-center tabledata">Reservation screening</th>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-check"></i>
+            </span></td>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-xmark"></i>
+            </span></td>
+
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th scope="row" class="text-center tabledata">$3m damage protection</th>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-check"></i>
+            </span></td>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-xmark"></i>
+            </span></td>
+
+        </tr>
+        <tr>
+          <th scope="row" class="text-center tabledata">$1m USD liability insurance</th>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-check"></i>
+            </span></td>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-check"></i>
+            </span></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-center tabledata">24-hour safety line</th>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-check"></i>
+            </span></td>
+          <td><span width="24" height="24">
+              <i class="fa-solid fa-xmark"></i>
+            </span></td>
+
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!--  Top to bottom protection airbnb  ends here-->
+
+
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted">
+
+    <section class="p-4 border-bottom">
+      <div class="container text-center text-md-start mt-4">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3  mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-2 text-dark">
+              <b>support</b>
+            </h6>
+            <p>
+              Help Center
+            </p>
+            <p>
+              AirCover
+            </p>
+            <p>
+              Supporting people with disabilities
+            </p>
+            <p>
+              cancellation options
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 text-dark">
+              Community
+            </h6>
+            <p>
+              Airbnb.org: disaster relief housing
+            </p>
+            <p>
+              Combating discrimination
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 text-dark">
+              Hosting
+            </h6>
+            <p>
+              Airbnb your home
+            </p>
+            <p>
+              AirCover for Hosts
+            </p>
+            <p>
+              Explore hosting resources
+            </p>
+            <p>
+              Visit our community forum
+            </p>
+            <p>
+              How to host responsibly
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold text-dark mb-4">Airbnb</h6>
+            <p>Newsroom</p>
+            <p>Learn about new features</p>
+            <p>Letter from our founders/p>
+            <p>Careers</p>
+            <p>Investors</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2022 Airbnb, Inc.
+
+    </div>
+  </footer>
+  <!-- Footer -->
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+</body>
+
+</html>

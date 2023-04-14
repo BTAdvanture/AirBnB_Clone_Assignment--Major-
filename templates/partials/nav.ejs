@@ -1,0 +1,70 @@
+<div class="main-container" style=" position: sticky; top:0px; z-index: 1;">
+
+  <!-- Navbar starts from here -->
+  <nav id="navbar" class="shadow-sm p-3 mb-4 bg-body ">
+
+    <!-- Navbar logo added here -->
+    <div class="logo">
+      <a href="/"><img src="/images/site-logo.png" alt="logo"></a>
+      <span>airbnb</span>
+    </div>
+
+    <!-- This is middle searchbar of our website -->
+    <div class="mid-nav shadow p-3  bg-body rounded-pill">
+
+      <span>
+        <a href="#">Anywhere</a>
+      </span>
+      <span>
+        |
+      </span>
+      <span>
+        <a href="#">Any Week</a>
+      </span>
+      <span>
+        |
+      </span>
+      <span>Add Guests</span>
+      <a class="search" href=""><i class="fa-solid fa-magnifying-glass"></i></i></a>
+
+    </div>
+
+    <!-- Right side of our navbar starts from here -->
+    <div class="right-nav">
+
+      <div class="host"><a class="text-dark" href="/host">become a host</a></div>
+      <div class="earthlogo">
+        <i class="fa-solid fa-globe fs-5"></i>
+      </div>
+
+      <!-- dropdown menu  -->
+      <div class="dropdown">
+        <a class="btn border-dark rounded-pill p-2" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class=" fs-6 fa-solid fa-bars"></i>
+          <i class=" fs-6 fa-solid fa-user"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+          <%if(locals.details){%>
+          <li class="dropdown-item" style="cursor: pointer;">
+            <a class="text-dark" href="/logout">logout</a>
+          </li>
+          <%}else{%>
+          <li class="dropdown-item" style="cursor: pointer;" , data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            login/signup
+          </li>
+          <%}%>
+                    <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/host">airbnb your home</a></li>
+                    <li><a class="dropdown-item" href="#">host your experience</a></li>
+                    <li><a class="dropdown-item" href="https://www.airbnb.co.in/help?audience=guest">help</a></li>
+                </ul>
+            </div>
+            
+
+        </div>
+      
+    </nav>
+    
+</div>
