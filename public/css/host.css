@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    color: #ff385c;
+    font-size: 4rem;
+}
+
+.map {
+    border-radius: 30px;
+}
+
+/* check button style */
+.fa-check {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(38, 225, 38);
+}
+
+.fa-xmark {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: red;
+}
+
+.aircover img {
+    width: 15rem;
+}
+
+.table .text-center {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.coverheading {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: bolder;
+}
+
+/* host airbnb */
+
+.airbnbsetup {
+    font-size: 1.3rem;
+    color: white;
+    background-color: #d90865;
+    padding: 5px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.airbnbsetup:hover {
+    color: whitesmoke;
+    opacity: 1;
+}
+
+.airbnbit {
+    padding: .8rem;
+    font-weight: bolder;
+    margin-right: .5rem;
+}
+
+/* Navbar media Query added here */
+@media screen and (max-width: 768px) {
+    .airbnbsetup {
+        font-size: 1rem;
+        height: 2.8rem;
+        position: relative;
+        bottom: .3rem;
+    }
+
+    .airbnbit {
+        display: none;
+    }
+
+    .logo {
+        width: 30px;
+    }
+
+    .map {
+        height: 50vh;
+    }
+
+    .heading {
+        /* color: #ff385c; */
+        font-size: 2rem;
+    }
+
+    .coverheading {
+        font-size: 14px;
+    }
+
+    .tabledata {
+        font-size: 15px;
+    }
+
+}

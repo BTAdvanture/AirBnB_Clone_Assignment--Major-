@@ -1,0 +1,257 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* border: 0.5px solid red; */
+}
+
+.review-save {
+    display: flex;
+    justify-content: space-between;
+}
+.data-name{
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding: 15px 0px;
+}
+
+.img-grid {
+    --gap: 10px;
+    --num-cols: 4;
+    --row-height: 170px;
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.img-grid>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-store{
+    display: flex;
+    justify-content: center;
+}
+
+.img-grid-col-2 {
+    grid-column: span 2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.img-grid-row-2 {
+    grid-row: span 2;
+}
+.border-radius{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.calender-booking{
+  display: flex;
+  justify-content: space-between;
+} 
+ /* icons */
+
+
+
+@media screen and (max-width:1024px) {
+    .img-grid {
+        --num-cols: 2;
+        --row-height: 150px;
+    }
+}
+
+
+
+
+.heading-color{
+    color: #ff385c;
+    font-weight: bolder;
+}
+.information h1{
+    font-weight: bolder;
+    text-align: center;
+} 
+
+.new{
+    font-size: 1rem;
+}
+.fa-star{
+    margin-left: 1rem;
+}
+
+
+
+/* calender css */
+
+
+
+
+.icons{
+    font-size: 1.7rem;
+}
+
+
+.container-booking{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.policies{
+    display: flex;
+    /* flex-direction: column; */
+}
+.pol{
+   font-size: 1.3rem; 
+   border-bottom: 1px solid grey;
+   text-align: center;
+}
+
+.offers{
+    display: flex;
+    width: 60%;
+    height: 300px;
+    /* border: 1px solid red; */
+}
+.offer-1{
+    width: 50%;
+    /* border: 1px solid purple; */
+}
+.offer-2{
+ 
+    width: 50%;
+    /* border: 1px solid darkgreen; */
+}
+.booking{
+    border-radius: 2rem;
+    width: 25%;
+    height: 22rem;
+  
+  
+}
+
+.offer-1 p i {
+    font-size: 1.5rem;
+}
+.offer-2 p i {
+    font-size: 1.5rem;
+}
+
+
+/* this is booking form checkin css */
+.checkin,.checkout,#guest{
+width: 100%;
+padding: .3rem;
+border-radius: 1rem;
+border: .5px solid grey;
+}
+
+.reserve{
+    position: sticky;
+    top: 20px;
+    background-color: #ff385c;
+    color:white;
+    border-radius: 1rem;
+    border:none;
+    padding: 5px;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .container-booking{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .booking{
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .offers{
+        width: 100%;
+    }
+    .offer-1 p i {
+        font-size: 1rem;
+    }
+    .offer-2 p i {
+        font-size: 1rem;
+    }
+
+  }
+  
+
+
+  @media screen and (max-width: 550px) {
+    .border-radius{
+      display: none;
+    }
+    .data-name{
+      font-size: 1rem;
+      padding:5px;
+    }
+    .address{
+      font-size: .8rem;
+    }
+    .share{
+      font-size: 14px;
+    }
+    .save{
+      font-size: 14px;
+    }
+    #img1{
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0px;
+        height: 100%;
+    }
+    #img2{
+        border-bottom-left-radius: 1rem;
+    }
+    #img4{
+        border-bottom-right-radius: 1rem;
+    }
+    .address{
+        display: none;
+    }
+    .logo a img{
+        height:55px ;
+    }
+    .featurette-heading{
+        font-size: 1rem;
+        text-align: center;
+        padding: 10px;
+    }
+    .lead span{
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fa-star{
+        font-size: 12px;
+    }
+    .new{
+        font-size: 15px;
+    }
+    .policies{
+        display: flex;
+        flex-direction: column;
+    }
+    .icons{
+        font-size: 1.3rem;
+        margin-right: 10px;
+    }
+    .pol{
+        font-size: 1rem;
+    }
+    .map>div{
+        display: block;
+    }
+    
+  
+  }
+  
+

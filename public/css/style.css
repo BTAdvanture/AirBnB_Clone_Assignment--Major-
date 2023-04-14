@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Navbar styled here */
+nav {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom:1px solid #ccc; */
+}
+
+/* Logo styled here */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* logo styling */
+.logo img {
+    height: 4.5rem;
+    margin-left: 3rem;
+}
+
+/* Site name */
+.logo span {
+    font-size: 25px;
+    font-weight: bolder;
+    color: #ff385c;
+
+}
+
+.search {
+    background-color: #ff385c;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.search i {
+    color: white;
+}
+
+.mid-nav span {
+    padding: 10px;
+}
+
+.mid-nav span a {
+    color: black;
+}
+
+
+
+/* Right nav styled here */
+
+.right-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+/* right navigation content  */
+.right-nav div {
+    margin-left: 1rem;
+    /* padding: 8px; */
+}
+
+
+.dropdown i {
+    color: rgb(61, 60, 60);
+
+}
+
+/* rigtht nav profile styled here */
+
+
+.fa-user {
+    margin-left: 8px;
+}
+
+.card-img {
+    height: 16rem;
+}
+
+.card {
+    height: 18rem;
+    text-transform: capitalize;
+}
+
+
+.card-body {
+    display: flex;
+    height: 8rem;
+    flex-direction: column;
+}
+
+.card-body span {
+    font-size: .9rem;
+}
+
+.fa-heart{
+    font-size: 1.5rem;
+    position: absolute;
+    top:2%;
+    left:90%;
+    color: white;
+}
+
+/* mediaquery for navbar responsiveness */
+@media only screen and (max-width: 768px) {
+    nav {
+        height: 3.5rem;
+    }
+
+    .logo img {
+        height: 3.5rem;
+        margin-left: 0;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+   
+
+    .right-nav {
+        margin-right: .5rem;
+    }
+
+    .host {
+        display: none;
+    }
+}
+
+.shadow-custom {
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, .25), 0 3px 10px 6px rgba(0, 0, 0, 0.06) !important;
+}
+
+
+@media only screen and (max-width: 930px) {
+    .mid-nav {
+        display: none;
+    }
+    .bottom-footer{
+        display: none;
+    }
+}
